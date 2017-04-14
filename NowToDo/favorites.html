@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <title>收藏夹</title>
+    <style>
+		body,p{
+			margin: 0;
+			padding: 0;
+			font-family: 'Microsoft YaHei';
+			overflow-x: hidden;
+		}
+		a {
+			text-decoration: none;
+			color:#444;
+		}
+		
+    	.nav {
+    		height: 40px;
+    		width: 100%;
+    		background: #eee;
+    		border-bottom:1px solid #ccc;
+    	}
+    	.nav a {
+    		line-height: 40px;
+    		margin-left: 20px;
+    		padding: 8px 0;
+    		
+    	}
+    	
+    	@media screen and (min-width: 1000px) {
+            .wrap{
+            	width: 1000px;
+            	margin:0 auto;
+            }
+        }
+        @media screen and (max-width: 720px) {
+            .wrap{
+            	width: 100%;
+            }
+        }
+        .list {
+        	overflow: hidden;
+        }
+        .item {
+        	border-bottom:1px solid #ccc;
+        	position: relative;  
+        }
+        .item .l {
+        	float: left;
+        	margin-right: 10px;
+		    width: 40%;
+		    height: 100px;
+		    overflow: hidden;
+        }
+        .l img {
+        	width: 100%;
+        }
+        
+        .item .r {
+        	width: 100%;
+        	height: 100px;
+        }
+        .red {
+        	color: red;
+        }
+        .ftSmall {
+        	font-size: 12px;
+        }
+        .pt {
+			padding-top: 10px;
+        }
+        .pt5 {
+			padding-top: 5px;
+        }
+        .mask {
+        	position: fixed;
+        	width: 100%;
+        	height: 100%;
+        	background: #000;
+        	opacity: 0.3;
+        	z-index: 1;
+        	left: 0;
+        	top:40px;
+        	display:none;
+
+        }
+        .types {
+        	position: fixed;
+        	width: 100%;
+        	background: #fff;
+        	z-index: 2;
+        	top:40px;
+        	padding:10px 0;
+        	display:none
+        }
+        .types a {
+        	margin-left: 20px;
+        	padding:10px;
+    		display: inline-block;
+        }
+        .delbtn {
+        	width:50px;
+        	height: 100px;
+        	position: absolute;
+        	right:-51px;
+        	top:0;
+        	background: #f00;
+        	text-align: center;
+        	color: #fff;
+        	line-height: 100px;
+        }
+
+        .inputWrap span {
+			display: inline-block;
+			border:1px solid #ccc;
+			width:30px;
+			height: 30px;
+			margin-left: 10px;
+        }
+    </style>
+    <script type='text/javascript' src="js/jquery.min.js"></script>
+</head>
+<body>
+	
+	<div class="wrap">
+		<div class="nav">
+			<a class='selector'>选择类别</a>
+			<span style="font-size:14px;margin-left:10px">电动车</span>
+			<a href="#A">A</a>
+		</div>
+		<div class="list">
+			<a href="#">
+				<div class="item">
+					<div class="l">
+						<img src="yunxiang.jpg" alt="">
+					</div>
+					<div class="r">
+						<p class="pt">标题男短袖</p>
+						<p class='ftSmall pt5'>xxx</p>
+						<p class="red pt">¥ 0.01</p>
+					</div>
+					<div class="delbtn">删除</div>
+					
+				</div>
+				
+			</a>
+			<a href="#">
+				<div class="item">
+					<div class="l">
+						<img src="yunxiang.jpg" alt="">
+					</div>
+					<div class="r">
+						<p class="pt">标题男短袖</p>
+						<p class='ftSmall pt5'>xxx</p>
+						<p class='red pt'>¥0.01</p>
+					</div>
+					<div class="delbtn">删除</div>
+				</div>
+				
+			</a>
+			<a href="#">
+				<div class="item">
+					<div class="l">
+						<img src="yunxiang.jpg" alt="">
+					</div>
+					<div class="r">
+						<p class="pt">标题男短袖</p>
+						<p class='ftSmall pt5'>xxx</p>
+						<p class='red pt'>¥0.01</p>
+					</div>
+					<div class="delbtn">删除</div>
+				</div>
+				
+			</a>
+			<a href="#">
+				<div class="item">
+					<div class="l">
+						<img src="yunxiang.jpg" alt="">
+					</div>
+					<div class="r">
+						<p class="pt">标题男短袖</p>
+						<p class='ftSmall pt5'>xxx</p>
+						<p class='red pt'>¥0.01</p>
+					</div>
+					<div class="delbtn">删除</div>
+				</div>
+				
+			</a>
+			<a href="#">
+				<div class="item">
+					<div class="l">
+						<img src="yunxiang.jpg" alt="">
+					</div>
+					<div class="r">
+						<p class="pt">电饭锅电饭锅豆腐</p>
+						<p class='ftSmall pt5'>xxx</p>
+						<p class='red pt'>¥0.01</p>
+					</div>
+					<div class="delbtn">删除</div>
+				</div>
+				
+			</a>
+
+			<a href="#">
+				<div class="item">
+					<div class="l">
+						<img src="yunxiang.jpg" alt="">
+					</div>
+					<div class="r">
+						<p class="pt">标题男短袖</p>
+						<p class='ftSmall pt5'>xxx</p>
+						<p class='red pt'>¥0.01</p>
+					</div>
+					<div class="delbtn">删除</div>
+				</div>
+				
+			</a>
+			<a href="#">
+				<div class="item">
+					<div class="l">
+						<img src="yunxiang.jpg" alt="">
+					</div>
+					<div class="r">
+						<p class="pt">标题男短袖</p>
+						<p class='ftSmall pt5'>xxx</p>
+						<p class='red pt'>¥0.01</p>
+					</div>
+					<div class="delbtn">删除</div>
+				</div>
+				
+			</a>
+			<a href="#">
+				<div class="item">
+					<div class="l">
+						<img src="yunxiang.jpg" alt="">
+					</div>
+					<div class="r">
+						<p class="pt">标题男短袖</p>
+						<p class='ftSmall pt5'>xxx</p>
+						<p class='red pt'>¥0.01</p>
+					</div>
+					<div class="delbtn">删除</div>
+				</div>
+				
+			</a>
+			<a href="#">
+				<div class="item">
+					<div class="l">
+						<img src="yunxiang.jpg" alt="">
+					</div>
+					<div class="r">
+						<p class="pt">标题男短袖</p>
+						<p class='ftSmall pt5'>xxx</p>
+						<p class='red pt'>¥0.01</p>
+					</div>
+					<div class="delbtn">删除</div>
+				</div>
+				
+			</a>
+			<a href="" name="A">
+				<div class="item">
+					<div class="l">
+						<img src="yunxiang.jpg" alt="">
+					</div>
+					<div class="r">
+						<p class="pt">改好法国恢复供货法国恢复供货</p>
+						<p class='ftSmall pt5'>xxx</p>
+						<p class='red pt'>¥0.01</p>
+					</div>
+					<div class="delbtn">删除</div>
+				</div>
+				
+			</a>
+			<div class="inputWrap" style="margin-top:20px;">
+				<span></span>
+				<span></span>
+				<span></span>
+				<span></span>
+				<span></span>
+				<span></span>
+			</div>
+			<div><input type="text" id="transferCode"></div>
+			
+		</div>
+		
+	</div>
+	<div class="mask"></div>
+	<div class="types" id="types" >
+		<a href="">电动车</a>
+		<a href="">汽车</a>
+
+	</div>
+	<script type="text/javascript">
+
+		$(function(){
+			$('.nav .selector').click(function(){
+				$('#types').show();
+				$('.mask').show();
+			})
+			$('.mask').click(function(){
+				$('#types').hide();
+				$('.mask').hide();
+			})
+
+			//交换码
+			
+			$('#transferCode').change(function(){
+				var transferCode = $('#transferCode').val();
+				for(var i=0;i<transferCode.length;i++){
+					$('.inputWrap').children('span').eq(i).val(transferCode.charAt(i));
+				}
+				//alert($('#transferCode').val().length);
+
+			})
+		})
+
+		//滑动删除
+			 // var start,lastXForMobile,pressedObj;
+			 // var item = document.querySelectorAll('.item');
+
+		  //   	for(var i=0;i<item.length;i++){
+		  //   		item[i].index = i;
+		  //   		item[i].addEventListener("touchstart",function(e){
+			 //                lastXForMobile = e.changedTouches[0].pageX;
+				//             pressedObj = this; // 记录被按下的对象 
+
+				//             // 记录开始按下时的点
+				//             var touches = event.touches[0];
+				//             start = { 
+				//                 x: touches.pageX, // 横坐标
+				//                 y: touches.pageY  // 纵坐标
+				//             };
+				             
+
+			 //        },false)
+			 //        item[i].addEventListener("touchmove",function(e){
+			 //            // 计算划动过程中x和y的变化量
+			 //            var touches = event.touches[0];
+			 //            delta = {
+			 //                x: touches.pageX - start.x,
+			 //                y: touches.pageY - start.y
+			 //            };
+
+			 //            // 横向位移大于纵向位移，阻止纵向滚动
+			 //            if (Math.abs(delta.x) > Math.abs(delta.y)) {
+			 //                event.preventDefault();
+			 //            }
+			            
+			 //        },false)
+
+			 //        item[i].addEventListener("touchend",function(e){
+			 //        	var diffX = e.changedTouches[0].pageX - lastXForMobile;  
+			 //            if (diffX < -50) {
+			 //                    $('.item').animate({left:"0"},'fast');  //所有归位
+			 //                    $(pressedObj).animate({left:"-50px"},'fast');         // 左滑
+			                
+			 //            } else if (diffX > 50) {
+			 //                $(pressedObj).stop(true,true).animate({left:"0"}); // 右滑
+			 //            }
+			 //        },false)
+		  //   	}
+
+
+
+		    	var start,pressedObj;
+		    	var items = document.querySelectorAll('.item');
+		    	for(let i=0;i<items.length;i++){
+
+		    		items[i].addEventListener("touchstart",function(e){
+		    			pressedObj = this;
+		    			start = {
+		    				x:e.changedTouches[0].pageX,
+		    				y:e.changedTouches[0].pageY
+		    			}
+		    			console.log(e.changedTouches+'start')
+		    		},false)
+
+		    		items[i].addEventListener("touchmove",function(e){
+		    			delta = {
+		    				x:e.targetTouches[0].pageX-start.x,
+		    				y:e.targetTouches[0].pageY-start.y
+		    			}
+
+		    			if(Math.abs(delta.x) > Math.abs(delta.y)){
+		    				e.preventDefault();
+		    			}
+
+		    			if(delta.x < -50){
+		    				$(pressedObj).css({"webkitTransform": "translate(-50px)"})
+		    			}else if(delta.x > 50){
+		    				$('.item').css({"webkitTransform": "translate(0px)"})
+		    				$(pressedObj).css({"webkitTransform": "translate(0px)"})
+		    			}else {
+		    				$('.item').css({"webkitTransform": "translate(0px)"})
+		    				$(pressedObj).css({"webkitTransform": "translate(0px)"})
+		    			}
+
+
+		    		},false)
+
+		    		items[i].addEventListener("touchend",function(e){
+
+		    			distanceX = e.changedTouches[0].pageX - start.x;
+		    			//console.log(distanceX+'end')
+		    			// if (distanceX < -50) {
+		    			// 	$('.item').animate({left:"0"},'fast');
+		    			// 	$(pressedObj).animate({left:"-50px"})
+		    			// }else if(distanceX > 50){
+		    			// 	$(pressedObj).stop(true,true).animate({left:"0"});
+		    			// }
+
+		    		},false);
+
+
+		    	}
+		        
+	</script>
+
+</body>
+</html>
